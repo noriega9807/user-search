@@ -5,7 +5,8 @@
         "MYSQL_URI": "localhost",
         "USER": "root",
         "PASSWORD": "root",
-        "DATABASE": "userSearch"
+        "DATABASE": "userSearch",
+        "USERTABLE": "users"
     },
     "development": {
         "PORT": 3000,
@@ -13,7 +14,8 @@
         "MYSQL_URI": "localhost",
         "USER": "root",
         "PASSWORD": "root",
-        "DATABASE": "userSearch"
+        "DATABASE": "userSearch",
+        "USERTABLE": "users"
     }
 
 }

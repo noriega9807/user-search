@@ -10,7 +10,7 @@ var userModel = {};
 userModel.getUsers = (field, text, callback) => {
     if (mysqlconnect) 
     {
-        mysqlconnect.query(`SELECT * FROM users WHERE ${field} LIKE "%${text}%"`, function(error, rows) {
+        mysqlconnect.query(`SELECT * FROM ${process.env.USERTABLE} WHERE ${field} LIKE "%${text}%"`, function(error, rows) {
             if(error) throw error;
             else callback(null, rows);
         });
