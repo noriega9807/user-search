@@ -7,3 +7,4 @@
  5. Modify `server->config->config.json` to match your MySQL database connection settings.
  6. Start your MySQL server.
  7. Run `npm start` to start the application.
+ 8. Open in your browser `localhost:3000`
