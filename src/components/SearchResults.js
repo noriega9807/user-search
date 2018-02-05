@@ -15,14 +15,20 @@ export default class SearchResults extends React.Component {
         if (prevProps.searchText !== this.props.searchText) {
         const url = `http://localhost:3000/users/${this.props.param}/${this.props.searchText}`;
         fetch(url)
-        .then(res => res.json())
+        .then((res) => {
+            console.log(res);
+            return res.json();
+        })
         .then(
         
             (result) => {
-                this.setState({
-                    isLoaded: true,
-                    results: result
-                });
+                if(!result.msg){
+                    this.setState({
+                        isLoaded: true,
+                        results: result
+                    });
+                }
+                
             },
             (error) => {
                 this.setState({
